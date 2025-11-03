@@ -28,11 +28,11 @@ function Portfolio() {
     },
     {
       id: 4,
-      title: 'Restaurant Website',
+      title: 'Curry Leaf Cafe',
       description:
-        'Beautiful restaurant website with online menu, reservation system, and customer reviews.',
+        'A sustainable vegetarian Indian restaurant website featuring menu, reservations, blog, and environmental impact tracking. Built for TSA Webmaster Competition.',
       imageUrl: null,
-      projectUrl: 'https://bella-vista-restaurant.vercel.app',
+      projectUrl: 'https://curryleafcafe.onrender.com/realindex.html',
     },
     {
       id: 5,
