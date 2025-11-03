@@ -8,6 +8,7 @@ function Portfolio() {
       description:
         'A modern e-commerce platform with shopping cart, payment integration, and admin dashboard.',
       imageUrl: null,
+      projectUrl: 'https://shopnow-store.vercel.app',
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ function Portfolio() {
       description:
         'Beautiful restaurant website with online menu, reservation system, and customer reviews.',
       imageUrl: null,
+      projectUrl: 'https://bella-vista-restaurant.vercel.app',
     },
     {
       id: 3,
@@ -22,6 +24,7 @@ function Portfolio() {
       description:
         'Dynamic fitness studio website with class schedules, trainer profiles, and membership signup.',
       imageUrl: null,
+      projectUrl: 'https://fitzone-studio.vercel.app',
     },
     {
       id: 4,
@@ -29,6 +32,7 @@ function Portfolio() {
       description:
         'Creative portfolio showcase for a photographer with gallery, blog, and contact form.',
       imageUrl: null,
+      projectUrl: 'https://alex-morgan-photography.vercel.app',
     },
     {
       id: 5,
@@ -36,6 +40,7 @@ function Portfolio() {
       description:
         'High-converting landing page for a SaaS product with features, pricing, and testimonials.',
       imageUrl: null,
+      projectUrl: 'https://taskflow-saas.vercel.app',
     },
     {
       id: 6,
@@ -43,6 +48,7 @@ function Portfolio() {
       description:
         'Engaging website for a non-profit with donation system, events calendar, and volunteer signup.',
       imageUrl: null,
+      projectUrl: 'https://earth-guardians.vercel.app',
     },
   ]
 
@@ -63,7 +69,7 @@ function Portfolio() {
               title={project.title}
               description={project.description}
               imageUrl={project.imageUrl}
-              projectUrl={`/portfolio/${project.id}`}
+              projectUrl={project.projectUrl}
             />
           ))}
         </div>
