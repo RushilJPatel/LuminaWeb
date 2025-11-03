@@ -4,6 +4,22 @@ function Portfolio() {
   const projects = [
     {
       id: 1,
+      title: 'Against The Current',
+      description:
+        'A modern web application built with React, featuring dynamic content and engaging user experience.',
+      imageUrl: null,
+      projectUrl: 'https://against-the-current-tau.vercel.app',
+    },
+    {
+      id: 2,
+      title: 'College Compass',
+      description:
+        'An AI-powered platform for college students, helping navigate educational resources and opportunities.',
+      imageUrl: null,
+      projectUrl: 'https://newengai.vercel.app',
+    },
+    {
+      id: 3,
       title: 'E-commerce Store',
       description:
         'A modern e-commerce platform with shopping cart, payment integration, and admin dashboard.',
@@ -11,7 +27,7 @@ function Portfolio() {
       projectUrl: 'https://shopnow-store.vercel.app',
     },
     {
-      id: 2,
+      id: 4,
       title: 'Restaurant Website',
       description:
         'Beautiful restaurant website with online menu, reservation system, and customer reviews.',
@@ -19,7 +35,7 @@ function Portfolio() {
       projectUrl: 'https://bella-vista-restaurant.vercel.app',
     },
     {
-      id: 3,
+      id: 5,
       title: 'Fitness Studio',
       description:
         'Dynamic fitness studio website with class schedules, trainer profiles, and membership signup.',
@@ -27,28 +43,12 @@ function Portfolio() {
       projectUrl: 'https://fitzone-studio.vercel.app',
     },
     {
-      id: 4,
-      title: 'Portfolio Website',
-      description:
-        'Creative portfolio showcase for a photographer with gallery, blog, and contact form.',
-      imageUrl: null,
-      projectUrl: 'https://alex-morgan-photography.vercel.app',
-    },
-    {
-      id: 5,
+      id: 6,
       title: 'SaaS Landing Page',
       description:
         'High-converting landing page for a SaaS product with features, pricing, and testimonials.',
       imageUrl: null,
       projectUrl: 'https://taskflow-saas.vercel.app',
-    },
-    {
-      id: 6,
-      title: 'Non-Profit Organization',
-      description:
-        'Engaging website for a non-profit with donation system, events calendar, and volunteer signup.',
-      imageUrl: null,
-      projectUrl: 'https://earth-guardians.vercel.app',
     },
   ]
 
