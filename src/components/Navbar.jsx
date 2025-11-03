@@ -20,7 +20,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="text-2xl font-bold text-blue-600">
-            Lumina Web
+            Lumina Web Design
           </Link>
 
           {/* Desktop Menu */}

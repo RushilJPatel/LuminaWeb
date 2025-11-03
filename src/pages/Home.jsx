@@ -7,16 +7,16 @@ function Home() {
       <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-400 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Lumina Web
+            Lumina Web Design
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-100">
-            I build fast, modern websites for small businesses.
+            We build fast, modern websites for small businesses.
           </p>
           <Link
             to="/portfolio"
             className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg"
           >
-            View My Work
+            View Our Work
           </Link>
         </div>
       </section>

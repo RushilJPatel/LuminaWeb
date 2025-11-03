@@ -56,10 +56,10 @@ function Portfolio() {
     <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-800">
-          My Portfolio
+          Our Portfolio
         </h1>
         <p className="text-center text-slate-600 mb-12 text-lg">
-          Here are some of my recent projects
+          Here are some of our recent projects
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
