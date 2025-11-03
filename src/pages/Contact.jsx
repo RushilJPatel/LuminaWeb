@@ -20,15 +20,22 @@ function Contact() {
     e.preventDefault()
     setStatus('sending')
 
-    // EmailJS configuration
-    // Replace these with your actual EmailJS credentials
-    const serviceId = 'YOUR_SERVICE_ID'
-    const templateId = 'YOUR_TEMPLATE_ID'
-    const publicKey = 'YOUR_PUBLIC_KEY'
+    // EmailJS configuration from environment variables
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+    // Check if EmailJS is configured
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus('error')
+      setTimeout(() => {
+        setStatus('')
+        alert('EmailJS is not configured. Please set up your environment variables. See EMAILJS_SETUP.md for instructions.')
+      }, 100)
+      return
+    }
 
     try {
-      // Uncomment and configure when you have EmailJS set up
-      /*
       await emailjs.send(
         serviceId,
         templateId,
@@ -39,15 +46,12 @@ function Contact() {
         },
         publicKey
       )
-      */
       
-      // For now, simulate success
-      setTimeout(() => {
-        setStatus('success')
-        setFormData({ name: '', email: '', message: '' })
-        setTimeout(() => setStatus(''), 3000)
-      }, 1000)
+      setStatus('success')
+      setFormData({ name: '', email: '', message: '' })
+      setTimeout(() => setStatus(''), 3000)
     } catch (error) {
+      console.error('EmailJS Error:', error)
       setStatus('error')
       setTimeout(() => setStatus(''), 3000)
     }
@@ -149,21 +153,31 @@ function Contact() {
           </form>
         </div>
 
-        {/* EmailJS Setup Instructions */}
-        <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
-          <h3 className="font-semibold text-blue-900 mb-2">
-            EmailJS Setup Required
-          </h3>
-          <p className="text-sm text-blue-800 mb-3">
-            To enable the contact form, you need to:
-          </p>
-          <ol className="text-sm text-blue-800 list-decimal list-inside space-y-1">
-            <li>Create a free account at emailjs.com</li>
-            <li>Create an email service and template</li>
-            <li>Update the credentials in Contact.jsx (serviceId, templateId, publicKey)</li>
-            <li>Uncomment the emailjs.send() code block</li>
-          </ol>
-        </div>
+        {/* EmailJS Setup Instructions - Only show if not configured */}
+        {!import.meta.env.VITE_EMAILJS_SERVICE_ID && (
+          <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <h3 className="font-semibold text-blue-900 mb-2">
+              EmailJS Setup Required
+            </h3>
+            <p className="text-sm text-blue-800 mb-3">
+              To enable the contact form, follow the setup guide:
+            </p>
+            <ol className="text-sm text-blue-800 list-decimal list-inside space-y-1 mb-3">
+              <li>Create a free account at emailjs.com</li>
+              <li>Create an email service and template</li>
+              <li>Create a .env file with your credentials</li>
+              <li>See EMAILJS_SETUP.md for detailed instructions</li>
+            </ol>
+            <a
+              href="https://www.emailjs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-600 hover:underline font-medium"
+            >
+              Get started with EmailJS →
+            </a>
+          </div>
+        )}
       </div>
     </section>
   )
