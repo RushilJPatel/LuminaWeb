@@ -24,7 +24,7 @@ function Portfolio() {
       description:
         'A modern e-commerce platform with shopping cart, payment integration, and admin dashboard.',
       imageUrl: null,
-      projectUrl: 'https://shopnow-store.vercel.app',
+      projectUrl: 'https://shopnow-store-88e1io1dm-rushils-projects-8100d253.vercel.app',
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ function Portfolio() {
       description:
         'Dynamic fitness studio website with class schedules, trainer profiles, and membership signup.',
       imageUrl: null,
-      projectUrl: 'https://fitzone-studio.vercel.app',
+      projectUrl: 'https://fitzone-studio-9olqemnra-rushils-projects-8100d253.vercel.app',
     },
     {
       id: 6,
@@ -48,7 +48,7 @@ function Portfolio() {
       description:
         'High-converting landing page for a SaaS product with features, pricing, and testimonials.',
       imageUrl: null,
-      projectUrl: 'https://taskflow-saas.vercel.app',
+      projectUrl: 'https://taskflow-saas-ghxbf3y2y-rushils-projects-8100d253.vercel.app',
     },
   ]
 
